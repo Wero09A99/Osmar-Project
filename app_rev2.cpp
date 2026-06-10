@@ -4,6 +4,12 @@
 // Calculadora Ambiental
 
 #include <iostream>
+#include <stdlib.h>
+
+#ifdef __BORLANDC__
+#include <conio.h>
+#endif
+
 using namespace std;
 
 int main()

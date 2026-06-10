@@ -5,6 +5,11 @@
 
 #include <iostream>
 #include <iomanip>
+#include <stdlib.h>
+
+#ifdef __BORLANDC__
+#include <conio.h>
+#endif
 
 using namespace std;
 
