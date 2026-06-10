@@ -7,27 +7,26 @@
 #include <stdlib.h>
 #include <conio.h>
 
-
 int main()
 {
     int opcion;
 
     // Contadores
-    int usuarios     = 0;
+    int usuarios = 0;
     int usuariosBajo = 0;
-    int usuariosMedio= 0;
+    int usuariosMedio = 0;
     int usuariosAlto = 0;
 
     // Acumuladores grupales
     int totalProductos = 0;
-    int totalBotellas  = 0;
-    int totalBolsas    = 0;
-    int totalEnvases   = 0;
-    int totalLatas     = 0;
-    int totalPlastico  = 0;
-    int totalPapel     = 0;
-    int totalComida    = 0;
-    int totalVidrio    = 0;
+    int totalBotellas = 0;
+    int totalBolsas = 0;
+    int totalEnvases = 0;
+    int totalLatas = 0;
+    int totalPlastico = 0;
+    int totalPapel = 0;
+    int totalComida = 0;
+    int totalVidrio = 0;
 
     float sumaImpactos = 0;
 
@@ -196,7 +195,7 @@ int main()
 
         residuosTotales =
             botellas + bolsas + envases + latas +
-            plastico + papel  + comida  + vidrio;
+            plastico + papel + comida + vidrio;
 
         if (residuosTotales == 0)
         {
@@ -212,9 +211,9 @@ int main()
         textcolor(CYAN);
         cout << "\n  REPORTE INDIVIDUAL\n";
         textcolor(LIGHTGRAY);
-        cout << "  Productos comprados : " << productos       << "\n";
+        cout << "  Productos comprados : " << productos << "\n";
         cout << "  Residuos generados  : " << residuosTotales << "\n";
-        cout << "  Indice de impacto   : " << indiceImpacto   << "\n";
+        cout << "  Indice de impacto   : " << indiceImpacto << "\n";
 
         // Clasificacion
         textcolor(CYAN);
@@ -259,11 +258,11 @@ int main()
             plastico > comida)
             cout << "  El principal residuo generado fue el PLASTICO.\n";
         else if (papel > plastico &&
-                 papel > vidrio  &&
+                 papel > vidrio &&
                  papel > comida)
             cout << "  El principal residuo generado fue el PAPEL.\n";
         else if (vidrio > plastico &&
-                 vidrio > papel  &&
+                 vidrio > papel &&
                  vidrio > comida)
             cout << "  El principal residuo generado fue el VIDRIO.\n";
         else
@@ -272,25 +271,25 @@ int main()
         if (residuosTotales > 0)
         {
             float pBotellas = (botellas * 100.0) / residuosTotales;
-            float pBolsas   = (bolsas   * 100.0) / residuosTotales;
-            float pEnvases  = (envases  * 100.0) / residuosTotales;
-            float pLatas    = (latas    * 100.0) / residuosTotales;
+            float pBolsas = (bolsas * 100.0) / residuosTotales;
+            float pEnvases = (envases * 100.0) / residuosTotales;
+            float pLatas = (latas * 100.0) / residuosTotales;
             float pPlastico = (plastico * 100.0) / residuosTotales;
-            float pPapel    = (papel    * 100.0) / residuosTotales;
-            float pComida   = (comida   * 100.0) / residuosTotales;
-            float pVidrio   = (vidrio   * 100.0) / residuosTotales;
+            float pPapel = (papel * 100.0) / residuosTotales;
+            float pComida = (comida * 100.0) / residuosTotales;
+            float pVidrio = (vidrio * 100.0) / residuosTotales;
 
             textcolor(CYAN);
             cout << "\n  PORCENTAJE DE RESIDUOS\n";
             textcolor(LIGHTGRAY);
             cout << "  Botellas : " << pBotellas << "%\n";
-            cout << "  Bolsas   : " << pBolsas   << "%\n";
-            cout << "  Envases  : " << pEnvases  << "%\n";
-            cout << "  Latas    : " << pLatas    << "%\n";
+            cout << "  Bolsas   : " << pBolsas << "%\n";
+            cout << "  Envases  : " << pEnvases << "%\n";
+            cout << "  Latas    : " << pLatas << "%\n";
             cout << "  Plastico : " << pPlastico << "%\n";
-            cout << "  Papel    : " << pPapel    << "%\n";
-            cout << "  Comida   : " << pComida   << "%\n";
-            cout << "  Vidrio   : " << pVidrio   << "%\n";
+            cout << "  Papel    : " << pPapel << "%\n";
+            cout << "  Comida   : " << pComida << "%\n";
+            cout << "  Vidrio   : " << pVidrio << "%\n";
 
             if (pPlastico >= 40)
             {
@@ -315,15 +314,15 @@ int main()
         // Acumuladores
         usuarios++;
         totalProductos += productos;
-        totalBotellas  += botellas;
-        totalBolsas    += bolsas;
-        totalEnvases   += envases;
-        totalLatas     += latas;
-        totalPlastico  += plastico;
-        totalPapel     += papel;
-        totalComida    += comida;
-        totalVidrio    += vidrio;
-        sumaImpactos   += indiceImpacto;
+        totalBotellas += botellas;
+        totalBolsas += bolsas;
+        totalEnvases += envases;
+        totalLatas += latas;
+        totalPlastico += plastico;
+        totalPapel += papel;
+        totalComida += comida;
+        totalVidrio += vidrio;
+        sumaImpactos += indiceImpacto;
 
         // Continuar o salir
         do
@@ -345,8 +344,8 @@ int main()
 
     // Estadisticas generales
     int residuosGrupo =
-        totalBotellas + totalBolsas  + totalEnvases + totalLatas +
-        totalPlastico + totalPapel   + totalComida  + totalVidrio;
+        totalBotellas + totalBolsas + totalEnvases + totalLatas +
+        totalPlastico + totalPapel + totalComida + totalVidrio;
 
     clrscr();
     textcolor(YELLOW);
@@ -354,26 +353,26 @@ int main()
     cout << "\n  ESTADISTICAS GENERALES DEL GRUPO\n";
     textcolor(LIGHTGRAY);
     textbackground(BLACK);
-    cout << "  Usuarios registrados : " << usuarios       << "\n";
+    cout << "  Usuarios registrados : " << usuarios << "\n";
     cout << "  Productos comprados  : " << totalProductos << "\n";
     cout << "  Botellas  : " << totalBotellas << "\n";
-    cout << "  Bolsas    : " << totalBolsas   << "\n";
-    cout << "  Envases   : " << totalEnvases  << "\n";
-    cout << "  Latas     : " << totalLatas    << "\n";
+    cout << "  Bolsas    : " << totalBolsas << "\n";
+    cout << "  Envases   : " << totalEnvases << "\n";
+    cout << "  Latas     : " << totalLatas << "\n";
     cout << "  Plastico  : " << totalPlastico << "\n";
-    cout << "  Papel     : " << totalPapel    << "\n";
-    cout << "  Comida    : " << totalComida   << "\n";
-    cout << "  Vidrio    : " << totalVidrio   << "\n";
-    cout << "  Total de residuos    : " << residuosGrupo  << "\n";
+    cout << "  Papel     : " << totalPapel << "\n";
+    cout << "  Comida    : " << totalComida << "\n";
+    cout << "  Vidrio    : " << totalVidrio << "\n";
+    cout << "  Total de residuos    : " << residuosGrupo << "\n";
 
     textcolor(CYAN);
     cout << "\n  USUARIOS POR NIVEL DE IMPACTO\n";
     textcolor(LIGHTGREEN);
-    cout << "  Impacto Bajo  : " << usuariosBajo  << "\n";
+    cout << "  Impacto Bajo  : " << usuariosBajo << "\n";
     textcolor(YELLOW);
     cout << "  Impacto Medio : " << usuariosMedio << "\n";
     textcolor(LIGHTRED);
-    cout << "  Impacto Alto  : " << usuariosAlto  << "\n";
+    cout << "  Impacto Alto  : " << usuariosAlto << "\n";
     textcolor(LIGHTGRAY);
 
     if (usuarios > 0)
